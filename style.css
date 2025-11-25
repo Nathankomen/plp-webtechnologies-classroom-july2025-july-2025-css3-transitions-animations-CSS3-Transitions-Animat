@@ -1,0 +1,32 @@
+/* Button hover effect */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+/* Box styling */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #2196F3;
+    margin: 20px auto;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+/* Keyframe animation for sliding and flipping */
+@keyframes slideAndFlip {
+    0% { transform: translateY(0) rotateY(0deg); background-color: #2196F3; }
+    50% { transform: translateY(-50px) rotateY(180deg); background-color: #FFC107; }
+    100% { transform: translateY(0) rotateY(360deg); background-color: #4CAF50; }
+}
+/* Class added dynamically by JS */
+.animate {
+    animation: slideAndFlip 1s forwards;
+}
